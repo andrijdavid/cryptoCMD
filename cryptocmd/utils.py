@@ -94,7 +94,7 @@ def download_coin_data(coin_code, start_date, end_date, fiat):
         .timestamp()
     )
 
-    api_url = "https://web-api.coinmarketcap.com/v1/cryptocurrency/ohlcv/historical?convert={}&slug={}&time_end={}&time_start={}".format(
+    api_url = "https://web-api.coinmarketcap.com/v1/cryptocurrency/ohlcv/historical?convert={}&slug={}&time_end={}&time_start={}&time_period=hourly&interval=hourly".format(
         fiat, coin_id, end_date_timestamp, start_date_timestamp
     )
 

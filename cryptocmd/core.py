@@ -92,7 +92,7 @@ class CmcScraper(object):
             _row_quote = list(_row["quote"].values())[0]
             date = datetime.strptime(
                 _row_quote["timestamp"], "%Y-%m-%dT%H:%M:%S.%fZ"
-            ).strftime("%d-%m-%Y")
+            )
 
             row = [
                 date,
@@ -160,7 +160,7 @@ class CmcScraper(object):
 
         # convert 'Date' column to datetime type
         dataframe["Date"] = pd.to_datetime(
-            dataframe["Date"], format="%d-%m-%Y", dayfirst=True
+            dataframe["Date"]
         )
 
         if date_as_index:
